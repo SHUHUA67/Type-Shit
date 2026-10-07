@@ -1,5 +1,5 @@
-// DOM: class 06. Loops and random values: class 08 demo.
-// setInterval and Date: class 08 notes.
+// dom: class 06. loops and random values: class 08 demo.
+// setinterval and date: class 08 notes.
 let bubbles = [];
 let positions = [3, 70, 18, 85, 5, 80];
 let speeds = [0.09, 0.13, 0.07];
@@ -12,7 +12,7 @@ window.onload = () => {
     let bubble = document.createElement("div");
     bubble.classList.add("bubble");
     bubble.style.left = positions[i] + "%";
-    // Each pair shares a row so the two circles can meet.
+    // each pair shares a row so the two circles can meet.
     bubble.style.top = 8 + Math.floor(i / 2) * 28 + "%";
 
     let shine = document.createElement("div");
@@ -39,7 +39,7 @@ function moveBubbles() {
       bubbles[left].style.left = positions[left] + "%";
       bubbles[right].style.left = positions[right] + "%";
 
-      // A bubble is 12% of the screen width.
+      // a bubble is 12% of the screen width.
       if (positions[left] + 12 >= positions[right]) {
         bubbles[left].style.backgroundColor = "transparent";
         bubbles[right].style.backgroundColor = "transparent";
@@ -50,7 +50,7 @@ function moveBubbles() {
         poppedAt[pair] = time;
       }
     } else {
-      // Date measures how long this pair has been popped.
+      // date measures how long this pair has been popped.
       let elapsed = time - poppedAt[pair];
 
       if (elapsed > 250) {
